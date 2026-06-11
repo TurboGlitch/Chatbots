@@ -1,49 +1,45 @@
-# 🧮 Math Chatbot
+# Math Chatbot
 
-A sleek, conversational AI interface built with Streamlit and powered by Google's Gemini API (`gemini-3.1-flash-lite-preview`). This chatbot is specifically instructed to assist users with all levels of mathematical inquiries while maintaining a polite and focused demeanor.
+An AI-powered math assistant built with Streamlit and Google Gemini. Ask any math question and get step-by-step explanations.
 
-## ✨ Features
-* **Math Focused:** Driven by system instructions to strictly discuss mathematics and refuse off-topic prompts.
-* **Custom Dark UI:** Tailored sidebar layouts with customized CSS typography and dynamic component hover-states.
-* **Session State Memory:** Maintains a continuous conversation history during your active user session.
-* **Quick Actions:** A "Clear Chat" utility button in the sidebar to wipe the session history instantly.
-* **Optimized Performance:** Utilizes quick toast responses and status spinners for an interactive user experience.
+## Features
+- Conversational chat interface with memory
+- Powered by Google Gemini
+- Clear chat button to reset conversation
+- Responsive wide layout
 
----
+## Tech Stack
+- Python
+- Streamlit
+- Google Gemini API (`google-genai`)
+- python-dotenv
 
-## 🛠️ Installation & Setup
+## Setup
 
-Follow these steps to run the application locally:
-
-### 1. Clone the Repository
+1. Clone the repo
 ```bash
-git clone [https://github.com/TurboGlitch/Chatbots.git](https://github.com/TurboGlitch/Chatbots.git)
-cd Chatbots
+git clone https://github.com/TurboGlitch/math-chatbot
+cd math-chatbot
+```
 
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Set Up a Virtual Environment (Recommended)
-# Create virtual environment
-python -m venv venv
+3. Create a `.env` file and add your Gemini API key
+```
+GEMINI_API_KEY=your_key_here
+```
 
-# Activate it
-# On Windows (Command Prompt/Git Bash):
-source venv/Scripts/activate
-# On Mac/Linux:
-source venv/bin/activate
-
-
-Install Dependencies
-Make sure you have your dependencies installed:
-
-pip install streamlit python-dotenv google-genai
-
-
-
-Environment Configuration
-Create a .env file in the root folder of your project to securely store your API keys:
-
-GEMINI_API_KEY=your_actual_gemini_api_key_here
-
-🚀 Running the App
-
+4. Run the app
+```bash
 streamlit run app.py
+```
+
+## Requirements
+```
+streamlit
+google-genai
+python-dotenv
+```
