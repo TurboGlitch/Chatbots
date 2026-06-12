@@ -25,6 +25,8 @@ streamlit run app.py
 
 An AI-powered website builder chatbot. Describe the website you want in plain English, and watch it get built and rendered live in a preview pane, side by side with the chat.
 
+https://chatbots-asnyd7dw3knbqksbbbrup7.streamlit.app/
+
 **Features**
 - Conversational chat interface with memory
 - Generates complete HTML/CSS/JS from natural language prompts
