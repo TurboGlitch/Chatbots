@@ -1,12 +1,44 @@
-# Math Chatbot
+# AI Streamlit Apps
 
-An AI-powered math assistant built with Streamlit and Google Gemini. Ask any math question and get step-by-step explanations.
+A collection of AI-powered apps built with Streamlit and Google Gemini.
 
-## Features
+---
+
+## 🧮 Math Chatbot
+
+An AI-powered math assistant. Ask any math question and get step-by-step explanations.
+
+**Features**
 - Conversational chat interface with memory
 - Powered by Google Gemini
 - Clear chat button to reset conversation
 - Responsive wide layout
+
+**Run it**
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🌐 Website Builder
+
+An AI-powered website builder chatbot. Describe the website you want in plain English, and watch it get built and rendered live in a preview pane, side by side with the chat.
+
+**Features**
+- Conversational chat interface with memory
+- Generates complete HTML/CSS/JS from natural language prompts
+- Live preview rendered in a sandboxed iframe
+- Iteratively edit your site — ask for changes and the preview updates
+- Clear chat button to start fresh
+- Responsive wide layout
+
+**Run it**
+```bash
+streamlit run bots/websitedisplay.py
+```
+
+---
 
 ## Tech Stack
 - Python
@@ -32,10 +64,7 @@ pip install -r requirements.txt
 GEMINI_API_KEY=your_key_here
 ```
 
-4. Run the app
-```bash
-streamlit run app.py
-```
+4. Run whichever app you want (see above)
 
 ## Requirements
 ```
