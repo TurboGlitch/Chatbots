@@ -30,7 +30,15 @@ with col1:
         
         st.session_state.history = []
         st.rerun()
-    
+
+
+    options = [ "Gemini 2.0 Flash", "Gemini 2.5 Flash"]
+    selected_model = st.selectbox("Choose Model", options)
+    if selected_model == "Gemini 2.0 Flash":
+        resmodel = "gemini-2.0-flash"
+    else:
+        resmodel = "gemini-2.5-flash"
+
     for message in st.session_state.history:
         if message["role"] == "user":
             role = "user"
@@ -52,9 +60,11 @@ with col1:
         with st.chat_message("user"):
             st.write(prompt)
         
+        
         with st.spinner("Building..."):
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                
+                model=resmodel,
                 contents=st.session_state.history,
                 config = types.GenerateContentConfig(
                     system_instruction="""
